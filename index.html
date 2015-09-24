@@ -10,22 +10,35 @@
   <title>blog</title>
   <meta name="description" content="A new Yeogurt application">
   <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Lato">
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha256-k2/8zcNbxVIh5mnQ52A0r3a6jAgMGxFJFE2707UxGCk= sha512-ZV9KawG2Legkwp3nAlxLIVFudTauWuBpC10uEafMHYL0Sarrz5A7G79kXh5+5+woxQ5HM559XX2UZjMJ36Wplg==" crossorigin="anonymous">
   <link rel="stylesheet" href="./styles/main.css">
 </head>
 <body>
   <!--[if lt IE 9]>
   <p class='browsehappy'>You are using an <strong>outdated</strong> browser. Please <a href='http://browsehappy.com/'>upgrade your browser</a> to improve your experience.</p>
   <![endif]-->
-  <div class="container">
-    <div class="yeogurt-info">
-      <h1>Welcome to Yeogurt!</h1>
-      <p>
-        Take a look at the
-        <a href="https://github.com/larsonjj/generator-yeogurt#yeogurt-generator---" target="" rel="" class="link">documentation</a>
-        and start mixing up something awesome.
-      </p>
-      <p><img src="images/yeogurt-swirl.png" width="75px" class="logo"></p>
+  <header id="header" role="banner">
+    <div class="group"><a href="#" class="logo"><img src="http://www.gravatar.com/avatar/d5d6b2b698378817adf0fa9336d4d8ac?s=100">
+        <div class="logo-name">
+          <h1>Josh Sullivan</h1>
+          <h2>Software Engineer & Web Developer</h2>
+        </div></a>
+      <nav id="nav" role="navigation" class="menu">
+        <ul id="menu-nav_menu">
+          <li class="menu-item"><a href="#about">About</a></li>
+          <li class="menu-item"><a href="#portfolio">portfolio</a></li>
+          <li class="hire menu-item"><a href="mailto:jaysche.sullivan@gmail.com" title="Send a message or project request to Josh">Hire Now</a></li>
+        </ul>
+      </nav>
     </div>
-  </div><code class="version">v1.3.2</code>
+  </header>
+  <main id="main" role="main">
+    <div class="intro front valign">
+      <header class="group vcenter">
+        <h1>Quality user experience through responsive web design and performant front-end development</h1><a id="portfolio-button" href="#portfolio" class="button">View portfolio<i class="fa fa-angle-down"></i></a>
+      </header>
+    </div>
+  </main>
   <script src="./scripts/main.js"></script>
 </body></html>

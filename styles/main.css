@@ -395,20 +395,98 @@ th {
   padding: 0;
 }
 
-a:link {
-  color: #ff0000;
+.button {
+  color: white;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 1.2;
+  font-family: 'Lato',sans-serif;
+  -webkit-font-smoothing: antialiased;
 }
 
-a:visited {
-  color: #00ff00;
+.button .fa {
+  position: relative;
+  margin-left: .25em;
 }
 
-a:hover {
-  color: #ff00ff;
+a.button {
+  position: relative;
+  display: inline-block;
+  zoom: 1;
+  padding: 0.75em 1.25em;
+  cursor: pointer;
+  background: #2098D1;
+  border: none;
+  color: white;
+  -webkit-transition: background-color 0.3s;
+  transition: background-color 0.3s;
+  line-height: 1.4;
 }
 
-a:active {
-  color: #0000ff;
+.button[href], .button[href]:focus, .button[href]:hover {
+  color: white;
+}
+
+.group {
+  zoom: 1;
+  max-width: 1110px;
+  margin: 0 auto;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.group:before, .group:after {
+  content: "";
+  display: table;
+}
+
+.group:after {
+  clear: both;
+}
+
+a {
+  color: #045F8C;
+  text-decoration: none;
+  -webkit-transition: color 0.3s;
+  transition: color 0.3s;
+}
+
+a:focus, a:hover {
+  color: #2098D1;
+}
+
+header[role="banner"] nav, .item, .back-to-top, .note, .subtitle, .date,
+.posts .title, .right-column, a[rel~="tag"], .footer .links, .intro h1,
+.intro h2, .intro.front h1, .button, article, .logo-name h1, .logo-name h2,
+.logos strong, .footer.group, .archives-year, .archives-categories {
+  font-family: 'Lato',sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.valign {
+  font-size: 0;
+}
+
+.valign:before {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.valign:before {
+  content: "";
+  height: 100%;
+}
+
+.valign > .vcenter {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.vcenter {
+  font-size: 16px;
+  font-size: 1rem;
 }
 
 *,
@@ -418,31 +496,233 @@ a:active {
   box-sizing: border-box;
 }
 
-.yeogurt-info {
-  text-align: center;
-  max-width: 500px;
-  margin-left: auto;
-  margin-right: auto;
+body {
+  background-color: #222;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -o-text-size-adjust: 100%;
+  text-size-adjust: 100%;
 }
 
-.version {
-  font-size: 14px;
-  font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
-  position: absolute;
-  bottom: 10px;
-  right: 10px;
+header[role="banner"] {
+  background: #2098D1;
+  color: white;
 }
 
-.logo {
-  margin-top: 15px;
+header[role="banner"] .group {
+  position: relative;
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 20px 20px 0 20px;
 }
 
-.browsehappy {
-  text-align: center;
+header[role="banner"] .logo {
+  display: inline-block;
+  zoom: 1;
+  vertical-align: middle;
+  float: left;
+  padding: 0;
+}
+
+header[role="banner"] .logo img {
+  display: inline-block;
+  vertical-align: middle;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 2px solid #efefef;
+}
+
+header[role="banner"] a {
+  color: #fff;
+}
+
+.logo-name {
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 8px;
+  padding: 7px 0;
+  line-height: 1.4;
+}
+
+.logo-name h1 {
+  font-weight: 900;
+  font-size: 1em;
+  text-transform: uppercase;
+  letter-spacing: 1px;
   margin: 0;
-  background: #fff8e2;
-  color: #000;
-  padding: 0.5em 0;
+  padding: 0;
+}
+
+.logo-name h2 {
+  margin: 0;
+  padding: 0;
+  font-size: 1em;
+  display: block;
+}
+
+.menu {
+  clear: none;
+  display: block;
+  position: relative;
+  font-size: 0;
+  font-weight: 500;
+  font-family: 'Lato',sans-serif;
+  -webkit-font-smoothing: antialiased;
+  text-align: center;
+  top: 7px;
+  float: right;
+  height: 100%;
+  margin-left: -20px;
+  margin-top: 0;
+  margin-right: -12px;
+  background: none;
+}
+
+.menu a {
+  color: #fff;
+  padding: 15px 12px;
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  position: relative;
+  display: inline-block;
+  zoom: 1;
+  width: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.menu a:focus:before, .menu a:hover:before {
+  left: 12px;
+  right: 12px;
+}
+
+.menu a:before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  right: 50%;
+  bottom: 5px;
+  height: 2px;
+  background: #045F8C;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: left, right;
+  transition-property: left, right;
+}
+
+.menu ul {
+  width: 100%;
+  display: inline-block;
+  zoom: 1;
+}
+
+.menu li {
+  width: auto;
+  max-width: 100%;
+  display: inline-block;
+  zoom: 1;
+  vertical-align: middle;
+  border: none;
+  text-align: center;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.menu .hire {
+  background: #045F8C;
+  -webkit-transition-duration: .3s;
+  transition-duration: .3s;
+  -webkit-transition-property: background;
+  transition-property: background;
+}
+
+.menu .hire:hover {
+  background: #013A55;
+}
+
+.menu .hire a:focus:before, .menu .hire a:hover:before {
+  content: normal;
+}
+
+main[role="main"] {
+  padding-bottom: 0;
+  background: white;
+}
+
+.intro {
+  position: relative;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 100%;
+  padding: 40px 20px 30px 20px;
+  background: #2098D1;
+  color: white;
+  text-align: center;
+}
+
+.intro.front {
+  padding: 40px 20px 30px 20px;
+}
+
+.intro.front header {
+  text-align: center;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  width: 100%;
+  max-width: 1150px;
+  margin: 0 auto;
+  padding: 40px 10px;
+  top: -26px;
+}
+
+.intro.front h1 {
+  font-size: 2.5em;
+  font-weight: 400;
+  letter-spacing: -0.01em;
+  line-height: 1.4;
+  max-width: 960px;
+  display: block;
+  margin: 0 auto;
+  margin-bottom: .2em;
+  font-family: 'Lato',sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+.intro.front .button .fa {
+  display: block;
+}
+
+.intro.front .button[href] {
+  margin-top: .5em;
+  padding: 1em;
+  padding-bottom: .5em;
+  font-size: 1em;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: color;
+  transition-property: color;
+}
+
+.intro.front .button[href]:hover {
+  color: #013A55;
+  background: none;
+}
+
+.intro header {
+  position: relative;
+  text-align: left;
+}
+
+.intro .button {
+  font-size: 1em;
+  margin-top: 2em;
 }
 
 /*# sourceMappingURL=main.css.map */
