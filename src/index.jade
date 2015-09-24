@@ -6,9 +6,19 @@ block content
   header(id='header', role='banner')
     .group
       a(class='logo', href='#')
+        img(src='http://www.gravatar.com/avatar/d5d6b2b698378817adf0fa9336d4d8ac?s=100')
         .logo-name
           h1 Josh Sullivan
           h2 Software Engineer & Web Developer
+      nav(id='nav', role='navigation', class='menu')
+        ul#menu-nav_menu
+            li.menu-item
+                a(href='#about') About
+            li.menu-item
+                a(href='#portfolio') portfolio
+            li.hire.menu-item
+                a(href='mailto:jaysche.sullivan@gmail.com', title='Send a message or project request to Josh') Hire Now
+            
   main(id='main', role='main')
     div.intro.front.valign
       header.group.vcenter
@@ -16,16 +26,3 @@ block content
         a(id='portfolio-button', class='button', href='#portfolio') View portfolio
           i.fa.fa-angle-down
           
-  .container
-    .yeogurt-info
-      h1 Welcome to Yeogurt!
-      p.
-        Take a look at the
-        #[+link({href:'https://github.com/larsonjj/generator-yeogurt#yeogurt-generator---', text: 'documentation'})]
-        and start mixing up something awesome.
-      p
-        img.logo(src="images/yeogurt-swirl.png", width="75px")
-  code.version v1.3.2
-
-
-  

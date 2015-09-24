@@ -5,6 +5,7 @@
 @import '../_modules/button/button';
 @import '../_modules/group/group';
 @import '../_modules/link/link';
+@import '../_modules/typography/typography';
 @import '../_modules/valign/valign';
 
 // Box sizing partial styles:
@@ -43,6 +44,15 @@ header[role="banner"] {
     vertical-align: middle;
     float: left;
     padding: 0;
+
+    img {
+        display: inline-block;
+        vertical-align: middle;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        border: 2px solid #efefef;
+    }
   }
 
   a {
@@ -72,41 +82,46 @@ header[role="banner"] {
     font-size: 1em;
     display:block;
   }
+}
 
-  .menu {
-    clear: none;
-    display: block;
+.menu {
+  clear: none;
+  display: block;
+  position: relative;
+  font-size: 0;
+  font-weight: 500;
+  font-family: 'Lato',sans-serif;
+  -webkit-font-smoothing: antialiased;
+  text-align: center;
+  top: 7px;
+  float: right;
+  height: 100%;
+  margin-left: -20px;
+  margin-top: 0;
+  margin-right: -12px;
+  background: none;
+
+  a {
+    color: #fff;
+    padding: 15px 12px;
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
     position: relative;
-    font-size: 0;
-    font-weight: 500;
-    font-family: 'Lato',sans-serif;
-    -webkit-font-smoothing: antialiased;
-    text-align: center;
-    top: 7px;
-    float: right;
-    height: 100%;
-    margin-left: -20px;
-    margin-top: 0;
-    margin-right: -12px;
-    background: none;
+    display: inline-block;
+    zoom: 1;
+    width: 100%;
+    box-sizing: border-box;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
 
-    a {
-      color: #fff;
-      padding: 15px 12px;
-      font-size: 13px;
-      font-weight: 700;
-      text-transform: uppercase;
-      position: relative;
-      display: inline-block;
-      zoom: 1;
-      width: 100%;
-      padding: 15px 6px;
-      box-sizing: border-box;
-      text-overflow: ellipsis;
-      overflow: hidden;
-      white-space: nowrap;
+    &:focus:before, &:hover:before {
+        left: 12px;
+        right: 12px;
+    }
 
-      &:before {
+    &:before {
         content: "";
         position: absolute;
         left: 50%;
@@ -124,31 +139,49 @@ header[role="banner"] {
         -ms-transition-property: left, right;
         -o-transition-property: left, right;
         transition-property: left, right;
-      }
+    }
+  }
+
+  ul {
+    width: 100%;
+    display: inline-block;
+    zoom: 1;
+  }
+
+  li {
+    width: auto;
+    max-width: 100%;
+    display: inline-block;
+    zoom: 1;
+    vertical-align: middle;
+    border: none;
+    text-align: center;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+
+  .hire {
+    background: #045F8C;
+    -webkit-transition-duration: .3s;
+    -moz-transition-duration: .3s;
+    -ms-transition-duration: .3s;
+    -o-transition-duration: .3s;
+    transition-duration: .3s;
+    -webkit-transition-property: background;
+    -moz-transition-property: background;
+    -ms-transition-property: background;
+    -o-transition-property: background;
+    transition-property: background;
+
+    &:hover {
+        background: #013A55;
     }
 
-    ul {
-      width: 100%;
-      display: inline-block;
-      zoom: 1;
-    }
-
-    li {
-      width: auto;
-      max-width: 100%;
-      display: inline-block;
-      zoom: 1;
-      vertical-align: middle;
-      border: none;
-      text-align: center;
-      text-overflow: ellipsis;
-      overflow: hidden;
-      white-space: nowrap;
-      border-bottom: #333 solid 1px;
-
-      &:last-child {
-        border-bottom: none;
-      }
+    a {
+        &:focus:before, &:hover:before {
+            content: normal;
+        }
     }
   }
 }
@@ -202,7 +235,7 @@ main[role="main"] {
         margin-top: .5em;
         padding: 1em;
         padding-bottom: .5em;
-        font-size: .875em;
+        font-size: 1em;
         -webkit-transition-duration: 0.3s;
         -moz-transition-duration: 0.3s;
         -ms-transition-duration: 0.3s;
@@ -213,6 +246,11 @@ main[role="main"] {
         -ms-transition-property: color;
         -o-transition-property: color;
         transition-property: color;
+
+        &:hover {
+            color: #013A55;
+            background: none;
+        }
       }
     }
 

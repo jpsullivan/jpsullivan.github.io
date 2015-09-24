@@ -8,5 +8,4 @@ var Link = require('../_modules/link/link');
 
 $(function() {
   new Link(); // Activate Link modules logic
-  console.log('Welcome to Yeogurt!');
 });
