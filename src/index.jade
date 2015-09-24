@@ -1,0 +1,31 @@
+extends _layouts/base
+
+include _modules/link/link
+
+block content
+  header(id='header', role='banner')
+    .group
+      a(class='logo', href='#')
+        .logo-name
+          h1 Josh Sullivan
+          h2 Software Engineer & Web Developer
+  main(id='main', role='main')
+    div.intro.front.valign
+      header.group.vcenter
+        h1 Quality user experience through responsive web design and performant front-end development
+        a(id='portfolio-button', class='button', href='#portfolio') View portfolio
+          i.fa.fa-angle-down
+          
+  .container
+    .yeogurt-info
+      h1 Welcome to Yeogurt!
+      p.
+        Take a look at the
+        #[+link({href:'https://github.com/larsonjj/generator-yeogurt#yeogurt-generator---', text: 'documentation'})]
+        and start mixing up something awesome.
+      p
+        img.logo(src="images/yeogurt-swirl.png", width="75px")
+  code.version v1.3.2
+
+
+  

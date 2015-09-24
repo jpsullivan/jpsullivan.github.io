@@ -1,0 +1,23 @@
+.valign {
+  font-size: 0;
+
+  &:before {
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  &:before {
+    content: "";
+    height: 100%;
+  }
+}
+
+.valign > .vcenter {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.vcenter {
+  font-size: 16px;
+  font-size: 1rem;
+}
