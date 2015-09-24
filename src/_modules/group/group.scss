@@ -14,3 +14,37 @@
     clear: both;
   }
 }
+
+.third {
+    display: block;
+    width: 100%;
+
+    @media only screen and (min-width: 681px) {
+        display: inline-block;
+        zoom: 1;
+        vertical-align: top;
+        width: 45%;
+    }
+
+    @media only screen and (min-width: 981px) {
+        display: inline-block;
+        zoom: 1;
+        vertical-align: top;
+        width: 30%;
+    }
+
+    &:nth-child(3n+1) {
+        @media only screen and (min-width: 681px) {
+            margin-right: 5%;
+        }
+        @media only screen and (min-width: 981px) {
+            margin-right: 0;
+        }
+    }
+
+    &:nth-child(3n+2) {
+        @media only screen and (min-width: 681px) {
+            margin-left: 5%;
+        }
+    }
+}
