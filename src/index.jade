@@ -24,23 +24,29 @@ block content
   main(id='main', role='main')
     div.intro.front.valign
       header.group.vcenter
-        h1 Quality user experience through responsive web design and performant front-end development
+        h1 Over ten years of experience transforming ideas into engaging digital experiences
         a(id='portfolio-button', class='button', href='#portfolio') View portfolio
           i.fa.fa-angle-down
-    section.featured-work
+    section.featured-work#portfolio
         h1.title Featured Projects
         ul.three-up.no-gutter
             li
                 a(href='#' style='background-color: #215181;')
                     img(src='images/logo-quoteflow.png')
                 h3 HTML5, CSS3, jQuery, Backbone, C#
+                    span.project-name QuoteFlow
             li
                 a(href='#' style='background-color: #fff;')
                     img(src='images/logo-omni.png')
                 h3 HTML5, CSS3, Backbone, C#
-                
+                    span.project-name Intra Omni
+            li
+                a(href='#' style='background-color: #33363B;')
+                    img(src='images/logo-lucene.png')
+                h3 C#, Java
+                    span.project-name Lucene.NET
       
-  .footer.group
+  .footer.group#about
     .links
         .third
             .avatar.social-links
@@ -54,4 +60,15 @@ block content
             li
                 a(href='http://twitter.com/jaysche_', target='_blank')
                     i.fa.fa-twitter
+                p. 
+                    Follow #[+link({href:'http://twitter.com/jaysche_', text: '@jaysche_'})] 
+                    for programming & design articles, opinions and links.
+            li
+                a(href='http://github.com/jpsullivan', target='_blank')
+                    i.fa.fa-github
+                p. 
+                    View #[+link({href:'http://github.com/jpsullivan', text: '@jpsullivan'})] 
+                    on GitHub for open-source projects such as #[+link({href:'https://github.com/jpsullivan/lucenenet', text: 'Lucene.Net'})], 
+                    #[+link({href:'https://github.com/jpsullivan/Gmail-Docs-Autosave', text: 'Gmail Attachments to Drive'})] or 
+                    #[+link({href:'https://github.com/jpsullivan/Letter', text: 'Letter'})]
         .third

@@ -4,6 +4,7 @@
   "dependencies": {
     "font-awesome": "^4.4.0",
     "jquery": "~2.1.3",
+    "jquery-scrollto": "^1.4.4",
     "normalize.css": "~3.0.1"
   },
   "devDependencies": {
